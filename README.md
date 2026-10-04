@@ -34,6 +34,7 @@ My thoughts:
 - The two timeline requirements (2e and 3e) would make good prerequisites. 
 - If you don't have the timelines as prerequisites, write down some milestones for AI and automation (at least 5, maybe 10) on individual index cards or sticky notes, but don't put the dates on them.  First have the class try to put them in chronological order.  Then have the class guess/estimate the dates (years) for these milestones.  
 - You can do requirement 4(c) in class (develop your own ethical guidelines for the use of AI).  However, my thought is that this is best done with some reflection by the scout, in consultation with their parents/guardians.  So, I suggest making this one homework as well.
+- There were some concepts I thought were important, but which aren't part of the definitions requirement for the merit badge.  These are the "additional concepts" slides in the Requirement 1 section of the slide deck.  Use or not as you see fit.
 
 ## What is in this repository
 
