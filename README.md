@@ -1,6 +1,8 @@
 # Scouting America Artificial Intelligence Merit Badge: Class Materials
 
-A slide deck and counselor notes for teaching the Scouting America Artificial Intelligence merit badge in a group setting. These are one counselor's working materials, shared so other counselors can use, adapt, and improve them.
+Last updated: 2026-10-03 
+
+A slide deck and counselor notes for teaching the Scouting America Artificial Intelligence merit badge in a group setting. These are my working materials, shared so other counselors can use, adapt, and improve them.
 
 This is an unofficial resource. It is not produced, reviewed, or endorsed by Scouting America.
 
@@ -28,8 +30,10 @@ The design assumes:
 My thoughts:
 
 - As noted above, I strongly recommend that the class have a minimum age requirement of 13.  Teaching this class with a large age range (such as 11 through 17) would, in my opinion, be very difficult.  Computer, AI, and social media use by minors is a rapidly evolving situation.  Your mileage may vary, but consider what will work for your situation.
-- For the event where I taught this, they listed requirement 8 as a prerequisite.  I think the requirement would be much more meaningful to the scouts after going through the material, and I recommend no prerequisites (other than age) for the class.  
-- You can do requirement 4(c) in class (develop your own ethical guidelines for the use of AI).  However, my opinion is that this is best done with some reflection by the scout, in consultation with their parents/guardians.  
+- For the event where I taught this, we listed requirement 8 as a prerequisite.  In hindsight, I think the requirement would be much more meaningful to the scouts after going through the material.
+- The two timeline requirements (2e and 3e) would make good prerequisites. 
+- If you don't have the timelines as prerequisites, write down some milestones for AI and automation (at least 5, maybe 10) on individual index cards or sticky notes, but don't put the dates on them.  First have the class try to put them in chronological order.  Then have the class guess/estimate the dates (years) for these milestones.  
+- You can do requirement 4(c) in class (develop your own ethical guidelines for the use of AI).  However, my thought is that this is best done with some reflection by the scout, in consultation with their parents/guardians.  So, I suggest making this one homework as well.
 
 ## What is in this repository
 
@@ -40,7 +44,7 @@ My thoughts:
 
 ## How to use it
 
-1. Read the class notes first. They are written in the counselor's voice and give the reason for each slide.
+1. Read the class notes first. They are written in my voice and give the reason for each slide.
 2. Verify the current merit badge requirements.
 3. Edit the slides. Slides 3 and 4 ("Who am I?") are placeholders for your own background. Replace the title slide with your own event and name.
 4. Adjust the sample schedule in the notes to fit your event. It shows one way to fit the requirements into about 5 hours with two breaks and a buffer at the end of each session. It is an example only.
@@ -51,18 +55,19 @@ The notes and slides use the lettered requirement structure of the badge. The no
 
 ## Scouting America material
 
-Some content is taken verbatim from Scouting America resources:
+Some content is taken verbatim from Scouting America resources.  
 
-- the requirement text, and
-- the "AI or Not?" and "What Would You Do?" scenarios from Scouting's *Note to Counselor: Artificial Intelligence (AI) Merit Badge*.
+- the requirement text
+- All of the "AI or Not?" scenarios I used were selected from Scouting's *Note to Counselor: Artificial Intelligence (AI) Merit Badge*
+- Four of the five "What Would You Do?" scenarios from that resource.
 
-In the HTML notes, these passages are tagged with the CSS class `scouting`. In the slides, slides that use this material carry a Scouting logo in the upper right. This material belongs to Scouting America. It is **not** covered by the license below, and no license from Scouting America was found. The official sources are linked from the notes and from the title slide.
+In the HTML notes, these passages are tagged with the CSS class `scouting`. In the slides, slides that use this material carry a Scouting logo in the upper right. This material belongs to Scouting America. It is **not** covered by the license below, and I didn't find any license from Scouting America. The official sources are linked from the notes and from the title slide.
 
 Scouting America names, logos, and marks are trademarks of their owners.
 
 ## License
 
-My original content is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), with the exception of the Scouting America material described above. Please credit "Bruce E. Wilson" and link to this repository.
+My original content is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Please credit "Bruce E. Wilson" and link to this repository.
 
 The notes use the "GitHub" theme from Marked.app by Brett Terpstra. The notice in the HTML file should stay in place.
 
