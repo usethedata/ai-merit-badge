@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Merit Badge class notes</title>
+    <style type="text/css">
+@charset "UTF-8";
+/*
+AI Merit Badge class notes
+Bruce E. Wilson (bruce@usethedata.net)
+Great Smoky Mountains Council Fall 2026 Leadership Summit
+Carson-Newman University
+October 3, 2026
+These class notes were created with assistance from Claude Cowork using Sonnet 5.5.
+Some content is from Scouting's "Note to Counselor: Artificial Intelligence (AI) Merit Badge"
+  <https://filestore.scouting.org/filestore/Merit_Badge_ReqandRes/Note-to-Counselor-Artificial-Intelligence-(AI)-Merit-Badge.pdf>
+Some content is from links provided in Scouting's "Digital Resources for Artificial Intelligence Merit Badge Counselors"
+  <https://filestore.scouting.org/filestore/Merit_Badge_ReqandRes/Digital-Resources-for-Artificial-Intelligence-Merit-Badge-Counselors.pdf>
+
+Portions Copyright (C) 2026 Bruce E. Wilson.
+Reuse of my original content is permitted under CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>.
+Exception: passages tagged class="scouting" are taken verbatim from Scouting America materials,
+  remain the property of Scouting America, and are not covered by the CC BY 4.0 license.
+  These are the requirement text (em elements) and the official scenario paragraphs (p elements).
+
+Note: This document was created for my use as the class went through the accompanying PowerPoint slide deck.
+---------------------------------------------------------------
+The initial version of this document was created with Marked.app <https://marked2app.com>
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: GitHub
+Author: Brett Terpstra
+Description: Github README style. Includes theme for Pygmentized code blocks.
+---
+*/
+#wrapper {
+  color: rgb(36, 41, 46);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  text-size-adjust: 100%;
+}
+#wrapper aside,
+#wrapper article,
+#wrapper details,
+#wrapper figcaption,
+#wrapper figure,
+#wrapper footer,
+#wrapper header,
+#wrapper hgroup,
+#wrapper main,
+#wrapper menu,
+#wrapper nav,
+#wrapper section,
+#wrapper summary {
+  display: block;
+}
+#wrapper audio,
+#wrapper canvas,
+#wrapper progress,
+#wrapper video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+#wrapper audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+#wrapper [hidden],
+#wrapper template {
+  display: none;
+}
+#wrapper a {
+  background-color: transparent;
+}
+#wrapper a:active,
+#wrapper a:hover {
+  outline: 0;
+}
+#wrapper abbr[title] {
+  border-bottom: 1px dotted;
+}
+#wrapper b,
+#wrapper strong {
+  font-weight: bold;
+}
+#wrapper dfn {
+  font-style: italic;
+}
+#wrapper mark {
+  background: #ff0;
+  color: #000;
+}
+#wrapper small {
+  font-size: 80%;
+}
+#wrapper sub,
+#wrapper sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+#wrapper sup {
+  top: -0.5em;
+}
+#wrapper sub {
+  bottom: -0.25em;
+}
+#wrapper img {
+  border: 0;
+}
+#wrapper svg:not(:root) {
+  overflow: hidden;
+}
+#wrapper figure {
+  margin: 1em 40px;
+}
+#wrapper hr {
+  box-sizing: content-box;
+  height: 0;
+}
+#wrapper pre {
+  overflow: auto;
+}
+#wrapper code,
+#wrapper kbd,
+#wrapper pre,
+#wrapper samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+#wrapper button,
+#wrapper input,
+#wrapper optgroup,
+#wrapper select,
+#wrapper textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+#wrapper button {
+  overflow: visible;
+}
+#wrapper button,
+#wrapper select {
+  text-transform: none;
+}
+#wrapper button,
+#wrapper input[type=button],
+#wrapper input[type=reset],
+#wrapper input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+#wrapper button[disabled] {
+  cursor: default;
+}
+#wrapper button::-moz-focus-inner,
+#wrapper input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+#wrapper input {
+  line-height: normal;
+}
+#wrapper input[type=checkbox],
+#wrapper input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+#wrapper input[type=number]::-webkit-inner-spin-button,
+#wrapper input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+#wrapper input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+#wrapper input[type=search]::-webkit-search-cancel-button,
+#wrapper input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+#wrapper fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+#wrapper legend {
+  border: 0;
+  padding: 0;
+}
+#wrapper textarea {
+  overflow: auto;
+}
+#wrapper optgroup {
+  font-weight: bold;
+}
+#wrapper table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+#wrapper * {
+  box-sizing: border-box;
+}
+#wrapper input,
+#wrapper select,
+#wrapper textarea,
+#wrapper button {
+  font: 14px/21px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+#wrapper body {
+  font: 14px/21px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #333;
+  background-color: #fff;
+}
+#wrapper a {
+  color: #4078c0;
+  text-decoration: none;
+}
+#wrapper a:hover,
+#wrapper a:active {
+  text-decoration: underline;
+}
+#wrapper hr,
+#wrapper .rule {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+#wrapper hr:before,
+#wrapper .rule:before {
+  content: "";
+  display: table;
+}
+#wrapper hr:after,
+#wrapper .rule:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+#wrapper h1,
+#wrapper h2,
+#wrapper h3,
+#wrapper h4,
+#wrapper h5,
+#wrapper h6 {
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 24px 0 16px;
+  padding: 0;
+}
+#wrapper h1,
+#wrapper h2 {
+  border-bottom: 1px solid rgb(234, 236, 239);
+}
+#wrapper h1 {
+  font-size: 32px;
+  line-height: 40px;
+  margin: 0 0 16px;
+  padding: 0 0 9.6000003815px;
+}
+#wrapper h2 {
+  font-size: 24px;
+  line-height: 30px;
+  padding: 0 0 7.1999998093px;
+}
+#wrapper h3 {
+  font-size: 20px;
+  line-height: 25px;
+}
+#wrapper h4 {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 24px 0 16px;
+  padding: 0;
+}
+#wrapper h5 {
+  font-size: 14px;
+  line-height: 17px;
+}
+#wrapper h6 {
+  font-size: 13.6000003815px;
+  line-height: 17px;
+}
+#wrapper small {
+  font-size: 90%;
+}
+#wrapper blockquote {
+  margin: 0;
+}
+#wrapper ol ol,
+#wrapper ul ol {
+  list-style-type: lower-roman;
+}
+#wrapper ul ul ol,
+#wrapper ul ol ol,
+#wrapper ol ul ol,
+#wrapper ol ol ol {
+  list-style-type: lower-alpha;
+}
+#wrapper dd {
+  margin-left: 0;
+}
+#wrapper tt,
+#wrapper code,
+#wrapper pre {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+}
+#wrapper pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#wrapper {
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  border: solid 1px #dddddd !important;
+  border-radius: 3px;
+  color: #333;
+  font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.6;
+  padding: 3px;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+#wrapper {
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 15px;
+  padding: 30px;
+}
+#wrapper > *:first-child {
+  margin-top: 0 !important;
+}
+#wrapper > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+@media screen {
+  #wrapper {
+    border: solid 1px #ddd;
+  }
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+  margin-bottom: 16px;
+}
+
+hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+ul,
+ol {
+  padding-left: 2.8rem;
+}
+
+ul.no-list,
+ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+ul ul,
+ul ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol ol,
+ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li > p {
+  margin-bottom: 0;
+}
+li p + p {
+  margin-top: 16px;
+}
+
+dl {
+  padding: 0;
+}
+dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 700;
+}
+dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+blockquote {
+  padding: 0 15px;
+  margin-left: 0;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+blockquote > :first-child {
+  margin-top: 0;
+}
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+table th {
+  font-weight: 700;
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+span.frame {
+  display: block;
+  overflow: hidden;
+}
+span.frame > span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+span.frame span img {
+  display: block;
+  float: left;
+}
+span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: #333;
+}
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+span.align-center > span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+span.align-right > span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+span.float-left span {
+  margin: 13px 0 0;
+}
+span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+span.float-right > span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+code,
+tt {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding-bottom: 0.2em;
+  padding-top: 0.2em;
+  padding: 0;
+}
+
+code::before, code::after {
+  content: " ";
+  letter-spacing: -0.2em;
+}
+
+tt:before, tt:after {
+  content: " ";
+  letter-spacing: -0.2em;
+}
+
+code br,
+tt br {
+  display: none;
+}
+
+del code {
+  text-decoration: inherit;
+  vertical-align: text-top;
+}
+
+pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.highlight {
+  margin-bottom: 16px;
+}
+.highlight pre {
+  padding: 16px;
+  margin-bottom: 0;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 16px;
+  margin-bottom: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  word-wrap: normal;
+}
+pre code,
+pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+pre code:before, pre code:after {
+  content: normal;
+}
+pre tt:before, pre tt:after {
+  content: normal;
+}
+
+.poetry pre {
+  font-family: Georgia, Garamond, serif !important;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em;
+}
+.poetry pre code {
+  font-family: Georgia, Garamond, serif !important;
+  word-break: break-all;
+  word-break: break-word;
+  /* Non standard for webkit */
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  white-space: pre-wrap;
+}
+
+sup,
+sub,
+a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  vertical-align: super;
+  position: relative;
+}
+
+sub {
+  vertical-align: sub;
+  top: -1px;
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+  #wrapper {
+    background: #fff;
+    border: none !important;
+    font-size: 12px;
+  }
+  pre code {
+    overflow: visible;
+  }
+}
+@media screen {
+  body.inverted {
+    border-color: #555;
+    box-shadow: none;
+    color: #eee !important;
+  }
+  .inverted #wrapper,
+  .inverted hr,
+  .inverted p,
+  .inverted td,
+  .inverted li,
+  .inverted h1,
+  .inverted h2,
+  .inverted h3,
+  .inverted h4,
+  .inverted h5,
+  .inverted h6,
+  .inverted th,
+  .inverted .math,
+  .inverted caption,
+  .inverted dd,
+  .inverted dt,
+  .inverted blockquote {
+    border-color: #555;
+    box-shadow: none;
+    color: #eee !important;
+  }
+  .inverted td,
+  .inverted th {
+    background: #333;
+  }
+  .inverted pre:not(:has(> code.hljs)) {
+    background: #eeeeee;
+    color: #111;
+  }
+  .inverted code:not(.hljs),
+  .inverted tt {
+    background: #eeeeee;
+    color: #111;
+  }
+  .inverted h2 {
+    border-color: #555555;
+  }
+  .inverted hr {
+    border-color: #777;
+    border-width: 1px !important;
+  }
+  ::selection {
+    background: rgba(157, 193, 200, 0.5);
+  }
+  h1::selection {
+    background-color: rgba(45, 156, 208, 0.3);
+  }
+  h2::selection {
+    background-color: rgba(90, 182, 224, 0.3);
+  }
+  h3::selection,
+  h4::selection,
+  h5::selection,
+  h6::selection,
+  li::selection,
+  ol::selection {
+    background-color: rgba(133, 201, 232, 0.3);
+  }
+  code::selection {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #eeeeee;
+  }
+  code span::selection {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    color: #eeeeee !important;
+  }
+  a::selection {
+    background-color: rgba(255, 230, 102, 0.2);
+  }
+  .inverted a::selection {
+    background-color: rgba(255, 230, 102, 0.6);
+  }
+  td::selection,
+  th::selection,
+  caption::selection {
+    background-color: rgba(180, 237, 95, 0.5);
+  }
+  .inverted {
+    background: #0b2531;
+    background: rgb(37, 42, 42);
+  }
+  .inverted #wrapper {
+    background: rgb(37, 42, 42);
+  }
+  .inverted a {
+    color: rgb(172, 209, 213);
+  }
+}
+.highlight {
+  background: #fff;
+}
+.highlight .c {
+  color: #998;
+  font-style: italic;
+}
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+.highlight .k,
+.highlight .o {
+  font-weight: 700;
+}
+.highlight .cm {
+  color: #998;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #999;
+  font-weight: 700;
+}
+.highlight .c1 {
+  color: #998;
+  font-style: italic;
+}
+.highlight .cs {
+  color: #999;
+  font-weight: 700;
+  font-style: italic;
+}
+.highlight .gd {
+  color: #000;
+  background-color: #fdd;
+}
+.highlight .gd .x {
+  color: #000;
+  background-color: #faa;
+}
+.highlight .ge {
+  font-style: italic;
+}
+.highlight .gr {
+  color: #a00;
+}
+.highlight .gh {
+  color: #999;
+}
+.highlight .gi {
+  color: #000;
+  background-color: #dfd;
+}
+.highlight .gi .x {
+  color: #000;
+  background-color: #afa;
+}
+.highlight .go {
+  color: #888;
+}
+.highlight .gp {
+  color: #555;
+}
+.highlight .gs {
+  font-weight: 700;
+}
+.highlight .gu {
+  color: purple;
+  font-weight: 700;
+}
+.highlight .gt {
+  color: #a00;
+}
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr {
+  font-weight: 700;
+}
+.highlight .kt {
+  color: #458;
+  font-weight: 700;
+}
+.highlight .m {
+  color: #099;
+}
+.highlight .s {
+  color: #d14;
+}
+.highlight .n {
+  color: #333;
+}
+.highlight .na {
+  color: teal;
+}
+.highlight .nb {
+  color: #0086b3;
+}
+.highlight .nc {
+  color: #458;
+  font-weight: 700;
+}
+.highlight .no {
+  color: teal;
+}
+.highlight .ni {
+  color: purple;
+}
+.highlight .ne,
+.highlight .nf {
+  color: #900;
+  font-weight: 700;
+}
+.highlight .nn {
+  color: #555;
+}
+.highlight .nt {
+  color: navy;
+}
+.highlight .nv {
+  color: teal;
+}
+.highlight .ow {
+  font-weight: 700;
+}
+.highlight .w {
+  color: #bbb;
+}
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo {
+  color: #099;
+}
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx {
+  color: #d14;
+}
+.highlight .sr {
+  color: #009926;
+}
+.highlight .s1 {
+  color: #d14;
+}
+.highlight .ss {
+  color: #990073;
+}
+.highlight .bp {
+  color: #999;
+}
+.highlight .vc,
+.highlight .vg,
+.highlight .vi {
+  color: teal;
+}
+.highlight .il {
+  color: #099;
+}
+.highlight .gc {
+  color: #999;
+  background-color: #eaf2f5;
+}
+
+.type-csharp .highlight .k,
+.type-csharp .highlight .kt {
+  color: blue;
+}
+.type-csharp .highlight .nf {
+  color: #000;
+  font-weight: 400;
+}
+.type-csharp .highlight .nc {
+  color: #2b91af;
+}
+.type-csharp .highlight .nn {
+  color: #000;
+}
+.type-csharp .highlight .s,
+.type-csharp .highlight .sc {
+  color: #a31515;
+}
+
+.type-csharp .highlight .k,
+.type-csharp .highlight .kt {
+  color: #00f;
+}
+.type-csharp .highlight .nf {
+  color: #000;
+  font-weight: normal;
+}
+.type-csharp .highlight .nc {
+  color: #2b91af;
+}
+.type-csharp .highlight .nn {
+  color: #000;
+}
+.type-csharp .highlight .s,
+.type-csharp .highlight .sc {
+  color: #a31515;
+}
+
+body.dark #wrapper {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+.inverted kbd {
+  background-color: #666;
+  color: #fff;
+}pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/.hljs{color:#24292e;background:#fff}.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#d73a49}.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#6f42c1}.hljs-attr,.hljs-attribute,.hljs-literal,.hljs-meta,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#005cc5}.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#032f62}.hljs-built_in,.hljs-symbol{color:#e36209}.hljs-code,.hljs-comment,.hljs-formula{color:#6a737d}.hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#22863a}.hljs-subst{color:#24292e}.hljs-section{color:#005cc5;font-weight:700}.hljs-bullet{color:#735c0f}.hljs-emphasis{color:#24292e;font-style:italic}.hljs-strong{color:#24292e;font-weight:700}.hljs-addition{color:#22863a;background-color:#f0fff4}.hljs-deletion{color:#b31d28;background-color:#ffeef0}
+</style>  <style id="mk-diff-marker-css">#wrapper{position:relative}.has-diff-marker{position:relative}ins.diff-marker{display:none}body.showDiffMarkers ins.diff-marker{position:absolute!important;display:inline-flex!important;align-items:center;justify-content:center;left:-24px!important;width:15px!important;height:15px!important;padding:0!important;margin:0!important;text-decoration:none!important;border:none!important;border-radius:999px!important;background:rgba(100,200,255,.85)!important;box-shadow:0 0 0 2px #fff;color:#fff!important;font-size:11px!important;font-weight:600!important;line-height:1!important;pointer-events:auto!important;cursor:help!important;z-index:9999!important}body.showDiffMarkers ins.diff-marker::before{content:attr(data-counter);color:#fff;font-size:11px;font-weight:600;line-height:1;display:block}body.showDiffMarkers ins.diff-marker.diff-marker-dup,body.showDiffMarkers ins.diff-marker.diff-marker-hidden,body.proofing ins.diff-marker{display:none!important}body.showEditMarkerOnly ins.diff-marker{display:none}body.showEditMarkerOnly ins.diff-marker.diff-marker-edit-only{position:absolute!important;display:inline-flex!important;align-items:center;justify-content:center;left:-24px!important;width:15px!important;height:15px!important;padding:0!important;margin:0!important;text-decoration:none!important;border:none!important;border-radius:999px!important;background:rgba(100,200,255,.85)!important;box-shadow:0 0 0 2px #fff;color:#fff!important;pointer-events:auto!important;cursor:help!important;z-index:9999!important}</style>
+<style>#wrapper { max-width:auto; margin:0 auto; }
+/* .scouting marks text taken verbatim from Scouting America materials. No visual styling. */
+.scouting { }
+table td:first-child, table th:first-child { white-space:nowrap; }</style>
+<style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style>
+<style id="mk-highlights-css">.mk-highlight-inline {background: rgba(255, 215, 64, 0.42);border-radius: 0.12em;position: relative;}.mk-highlight-handle {background: rgba(184, 126, 0, 0.95);cursor: ew-resize;height: 1.35em;opacity: 0;pointer-events: none;position: absolute;top: -0.15em;width: 3px;z-index: 2;}.mk-highlight-handle[data-mk-hl-handle='start'] {left: -2px;}.mk-highlight-handle[data-mk-hl-handle='end'] {right: -2px;}.mk-highlight-inline:hover > .mk-highlight-handle,.mk-highlight-inline[data-mk-hl-focused] > .mk-highlight-handle,.mk-highlight-inline[data-mk-hl-hovered] > .mk-highlight-handle {opacity: 1;pointer-events: auto;}.mk-highlight-block {box-shadow: inset 3px 0 rgba(214, 158, 0, 0.8);background: rgba(255, 215, 64, 0.14);}.mk-highlights-hidden .mk-highlight-inline {background: transparent !important;}.mk-highlights-hidden .mk-highlight-block {box-shadow: none !important;background: transparent !important;}body.mk-hide-reading-highlights .mk-highlight-inline,body.mk-hide-reading-highlights .mk-highlight-block {background: transparent !important;border: none !important;box-shadow: none !important;}body.mk-hide-reading-highlights .mk-highlight-handle {display: none !important;}[data-mk-hl-has-comment] {position: relative;}[data-mk-hl-has-comment]::after {background: rgba(0, 116, 217, 0.95);border-radius: 50%;content: '';height: 6px;position: absolute;right: -2px;top: -2px;width: 6px;z-index: 3;}.mk-reading-hl-comment {display: inline;font-size: 0;height: 0;line-height: 0;overflow: hidden;pointer-events: none;width: 0;}body.mkshowcomments .mk-reading-hl-comment {display: inline-block;height: 1px;overflow: hidden;position: absolute;width: 1px;}</style>
+<style id="marked-print-logo-styles">
+      @media print {
+        /* Ensure headers and footers have proper height for logos */
+        @page {
+          margin-top: 1in;
+          margin-bottom: 1in;
+          margin-left: 1in;
+          margin-right: 1in;
+        }
+
+        /* Style for logos in headers/footers */
+        .mkprinting img[alt="Logo"] {
+          max-height: 50px !important;
+          height: auto !important;
+          width: auto !important;
+          vertical-align: middle !important;
+          display: inline-block !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+
+                /* Base header/footer styling - only tall enough for one line of text */
+        .mkprinting .print-header,
+        .mkprinting .print-footer {
+          min-height: var(--header-footer-height, 1.2em);
+          height: var(--header-footer-height, 1.2em);
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: var(--header-footer-font, inherit);
+          font-size: var(--header-footer-font-size, inherit);
+          line-height: 1.2;
+          overflow: hidden;
+        }
+
+        /* Ensure text in headers/footers uses the specified font preferences */
+        .mkprinting .print-header *,
+        .mkprinting .print-footer * {
+          font-family: var(--header-footer-font, inherit);
+          font-size: var(--header-footer-font-size, inherit);
+        }
+
+        /* Ensure proper text rendering in headers/footers */
+        .mkprinting .print-header,
+        .mkprinting .print-footer {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        /* Handle text wrapping if needed */
+        .mkprinting .print-header.wrap-text,
+        .mkprinting .print-footer.wrap-text {
+          white-space: normal;
+          height: auto;
+          min-height: var(--header-footer-height, 1.2em);
+        }
+
+        /* Adjust page margins when logos are present */
+        .mkprinting.has-logo {
+          margin-top: 1.2in;
+          margin-bottom: 1.2in;
+        }
+
+        /* Dynamic height adjustment for headers/footers with logos */
+        .mkprinting.has-logo .print-header,
+        .mkprinting.has-logo .print-footer {
+          min-height: var(--logo-header-height, 70px);
+          height: var(--logo-header-height, 70px);
+          padding: 10px 0;
+          box-sizing: border-box;
+        }
+
+        /* Ensure proper spacing around logos */
+        .mkprinting img[alt="Logo"] + * {
+          margin-left: 10px;
+        }
+
+        /* Responsive logo sizing */
+        .mkprinting img[alt="Logo"] {
+          max-height: 50px !important;
+          max-width: 200px !important;
+          object-fit: contain;
+        }
+      }
+    </style>
+
+
+
+</head>
+<body class="export">
+  <div id="wrapper"><h1 id="aimeritbadge%3Aclassnotes">AI Merit Badge: Class Notes</h1>
+
+<p><em>Note:</em> This HTML file contains a somewhat generalized version of the notes I used in presenting the AI merit badge.  
+See the README.md file in the repository for more information </p>    
+
+<ul>
+<li>Slides: <code>AI Merit Badge slides.pptx</code> (83 slides, one Heading slide per section)</li>
+<li>Builds: the concept slides (Requirement 1) and the AI or Not slides (Requirement 2d) reveal on click</li>
+</ul>
+
+<h2 id="groupArunningschedule">Sample Running Schedule</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Time</th>
+	<th style="text-align:left;">Section</th>
+	<th style="text-align:left;">Minutes</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">9:30–9:50</td>
+	<td style="text-align:left;">Introductions and Getting Started</td>
+	<td style="text-align:left;">20</td>
+</tr>
+<tr>
+	<td style="text-align:left;">9:50–10:25</td>
+	<td style="text-align:left;">Requirement 1: Definitions</td>
+	<td style="text-align:left;">35</td>
+</tr>
+<tr>
+	<td style="text-align:left;">10:25–10:35</td>
+	<td style="text-align:left;">Break</td>
+	<td style="text-align:left;">10</td>
+</tr>
+<tr>
+	<td style="text-align:left;">10:35–11:30</td>
+	<td style="text-align:left;">Requirement 2: AI Basics</td>
+	<td style="text-align:left;">55</td>
+</tr>
+<tr>
+	<td style="text-align:left;">11:30–11:45</td>
+	<td style="text-align:left;">Buffer</td>
+	<td style="text-align:left;">15</td>
+</tr>
+<tr>
+	<td style="text-align:left;">11:45–12:30</td>
+	<td style="text-align:left;">Lunch and walk back</td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">12:30–1:15</td>
+	<td style="text-align:left;">Requirement 3: Automation Basics</td>
+	<td style="text-align:left;">45</td>
+</tr>
+<tr>
+	<td style="text-align:left;">1:15–2:00</td>
+	<td style="text-align:left;">Requirement 4: Ethics in AI</td>
+	<td style="text-align:left;">45</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2:00–2:10</td>
+	<td style="text-align:left;">Break</td>
+	<td style="text-align:left;">10</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2:10–2:35</td>
+	<td style="text-align:left;">Requirement 5: Deepfakes</td>
+	<td style="text-align:left;">25</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2:35–3:05</td>
+	<td style="text-align:left;">Requirement 6: Developing AI Skills</td>
+	<td style="text-align:left;">30</td>
+</tr>
+<tr>
+	<td style="text-align:left;">3:05–3:10</td>
+	<td style="text-align:left;">Requirement 7: Practical Application</td>
+	<td style="text-align:left;">5</td>
+</tr>
+<tr>
+	<td style="text-align:left;">3:10–3:15</td>
+	<td style="text-align:left;">Requirement 8: Career Exploration</td>
+	<td style="text-align:left;">5</td>
+</tr>
+<tr>
+	<td style="text-align:left;">3:15–3:30</td>
+	<td style="text-align:left;">Buffer</td>
+	<td style="text-align:left;">15</td>
+</tr>
+<tr>
+	<td style="text-align:left;">3:30–3:50</td>
+	<td style="text-align:left;">Wrap-up (advancement reports, walk back for closing)</td>
+	<td style="text-align:left;">20</td>
+</tr>
+<tr>
+	<td style="text-align:left;">4:00–4:30</td>
+	<td style="text-align:left;">Closing ceremonies</td>
+	<td style="text-align:left;"></td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="introductionsandgettingstarted20min">Introductions and Getting Started (20 min)</h1>
+
+<ul>
+<li>My goal: improve students’ understanding of AI and help equip them to understand its tradeoffs
+
+<ul>
+<li>Help them make their own risk/reward decisions around AI, both personally and societally</li>
+</ul></li>
+<li>Event materials listed Requirement 8 as a prerequisite
+
+<h1 id="requirement1%3Adefinitions35min">Requirement 1: Definitions (35 min)</h1>
+
+<p><em class="scouting">Define the following terms and share the meaning of each with your counselor: artificial intelligence (AI), artificial intelligence agents, automation, basic programming, bots, data, databases, digital workers, general AI, machine learning (ML), narrow AI, superintelligent AI, tasks, triggers, workflows, and variables.</em><br>
+- 21 concepts in 35 minutes is about 1.7 minutes each<br>
+- Build: concept appears, ask the class what it means, click for my definition </p>
+
+<h2 id="meritbadgeconcepts">Merit Badge Concepts</h2>
+
+<ul>
+<li>Artificial Intelligence
+
+<ul>
+<li>Broad term</li>
+<li>Most of what people think about AI is a chatbot that uses a Large Language Model</li>
+<li>But there is a wide range of things that can be considered AI</li>
+</ul></li>
+<li>Narrow AI
+
+<ul>
+<li>Many AI systems are layers of Narrow AI systems that hand off to each other</li>
+</ul></li>
+<li>Superintelligent AI
+
+<ul>
+<li>Depending on what has transpired, you may need to deal with the 2026 Executive Order regarding defining Superintelligence.  My definition is the working technical definition.</li>
+</ul></li>
+<li>Machine Learning
+
+<ul>
+<li>Neural networks are one of many tools used in Machine Learning</li>
+</ul></li>
+</ul>
+
+<h2 id="additionalconcepts">Additional Concepts</h2>
+
+<ul>
+<li>These are concepts I think are important for the class, but they aren’t part of the formal requirements</li>
+<li>They will be important for later sections</li>
+<li>Sycophant
+
+<ul>
+<li>Nearly all LLMs are programmed in ways to make the user feel positive: “That’s a great idea.”</li>
+<li>This is to help drive engagement, but it is extremely dangerous</li>
+</ul></li>
+<li>Large Language Model (LLM)
+
+<ul>
+<li>This is what most people think about when they hear “AI”</li>
+<li>But AI is much more than LLMs</li>
+</ul></li>
+<li>Token
+
+<ul>
+<li>Token has many definitions</li>
+<li>This is the one that matters in this context</li>
+<li>AI systems generally charge based on the number of input and output tokens</li>
+</ul></li>
+</ul>
+
+<h1 id="requirement2%3Aaibasics55min">Requirement 2: AI Basics (55 min)</h1>
+
+<p><em class="scouting">Do the following and share what you learned with your counselor:</em> </p>
+
+<h2 id="2aeverydaylife%3Apossibleexamples">2(a) Everyday life: possible examples</h2>
+
+<p><em class="scouting">(a) Identify ten examples of how AI is currently used in everyday life.</em><br>
+- Digital photography<br>
+- Speech to text<br>
+- On-screen typing<br>
+- Auto driver assistance<br>
+- FaceID<br>
+- Voice assistants<br>
+- Music recommendations<br>
+- Social media feeds<br>
+- Snapchat/Instagram filters<br>
+- Videogame NPCs<br>
+- Spam detection<br>
+- Navigation software<br>
+- Ride share matching<br>
+- Customer service chatbots<br>
+- Writing assistants (Grammarly)<br>
+- Real-time language translation<br>
+- Auto captioning/subtitles<br>
+- Smart-home devices<br>
+- Fitness trackers<br>
+- Search engines </p>
+
+<h2 id="2bworkplace%3Apossibleexamples">2(b) Workplace: possible examples</h2>
+
+<p><em class="scouting">(b) Identify five examples of how AI is currently used in the workplace.</em><br>
+- Software development<br>
+- Fraud detection<br>
+- Security systems<br>
+- Customer “service”<br>
+- Resume/applicant screening<br>
+- Medical image analysis<br>
+- Warehouse robots<br>
+- Retail demand forecasting<br>
+- Ad targeting<br>
+- Data analysis </p>
+
+<h2 id="2cschool%3Apossibleexamples">2(c) School: possible examples</h2>
+
+<p><em class="scouting">(c) Identify five examples of how AI can be used at school or in support of your education.</em><br>
+- AI tutors<br>
+- Adaptive practice platforms<br>
+- Writing feedback<br>
+- Ear training (for musicians)<br>
+- Language learning<br>
+- Text to speech/speech to text (accessibility)<br>
+- Translation assistance (non-native speakers)<br>
+- “What am I not thinking of?”<br>
+- Searching to find primary sources </p>
+
+<h2 id="2daiornot">2(d) AI or Not?</h2>
+
+<p><em class="scouting">(d) Meet with your counselor and play ten rounds of the “AI or Not?” game to determine if the presented scenario utilizes AI. Discuss your answers.</em><br>
+- Ten rounds, in slide order<br>
+- Official Note to Counselor text below<br>
+- Ending with the chess program on purpose</p>
+
+<h3 id="round1%3Adigitalalarmclocknotai">Round 1: Digital Alarm Clock (Not AI)</h3>
+
+<p class="scouting"><em>Official scenario 4</em><br>
+- Situation: A basic digital alarm clock that goes off at set times.<br>
+- Answer: Not AI<br>
+- Explanation: Simple time-based trigger without learning or adaptation.<br>
+- Discuss: The difference between programming and AI, understanding automated systems, recognition of simple triggers.<br>
+- Scout connection: Camp schedule management.<br>
+- Follow-up discussion questions:<br>
+ - What would make this alarm clock “smart”?<br>
+ - How is this different from a smart home system?<br>
+ - What features would add AI capabilities? </p>
+
+<h3 id="round2%3Aweatherpredictionappai">Round 2: Weather Prediction App (AI)</h3>
+
+<p class="scouting"><em>Official scenario 3</em><br>
+- Situation: A smartphone app that predicts weather patterns and adjusts forecasts based on actual outcomes.<br>
+- Answer: AI<br>
+- Explanation: The system learns from past predictions and actual weather patterns to improve future forecasts.<br>
+- Discuss: Predictive analytics, data pattern recognition, and continuous learning systems.<br>
+- Scout connection: Weather prediction for outdoor activities and camping.<br>
+- Follow-up discussion questions:<br>
+ - How does weather prediction help in Scout activities?<br>
+ - What data does the system use?<br>
+ - How does it improve over time? </p>
+
+<h3 id="round3%3Amusicrecommendationsystemai">Round 3: Music Recommendation System (AI)</h3>
+
+<p class="scouting"><em>Official scenario 5</em><br>
+- Situation: A streaming service that suggests songs based on listening history.<br>
+- Answer: AI<br>
+- Explanation: Uses machine learning to understand preferences and make personal recommendations.<br>
+- Discuss: Pattern recognition in user behavior, personalization algorithms, content recommendation systems.<br>
+- Scout connection: Music merit badge.<br>
+- Follow-up discussion questions:<br>
+ - How does the system learn your preferences?<br>
+ - What patterns might it identify?<br>
+ - How could this technology help in other areas? </p>
+
+<h3 id="round4%3Atrafficlighttimernotai">Round 4: Traffic Light Timer (Not AI)</h3>
+
+<p class="scouting"><em>Official scenario 6</em><br>
+- Situation: A traffic light that changes at fixed intervals.<br>
+- Answer: Not AI<br>
+- Explanation: Operates on predetermined timing without adaptation.<br>
+- Discuss: Fixed automation vs. adaptive systems, understanding basic programming, recognition of scheduled tasks.<br>
+- Scout connection: Traffic Safety merit badge.<br>
+- Follow-up discussion questions:<br>
+ - What would make this traffic light “smart”?<br>
+ - How could AI improve traffic flow?<br>
+ - What sensors would be needed? </p>
+
+<h3 id="round5%3Asmarttrafficmanagementai">Round 5: Smart Traffic Management (AI)</h3>
+
+<p class="scouting"><em>Official scenario 7</em><br>
+- Situation: Traffic lights that adjust timing based on current traffic patterns.<br>
+- Answer: AI<br>
+- Explanation: System learns and adapts to traffic patterns in real-time.<br>
+- Discuss: Real-time data analysis, adaptive systems, pattern recognition.<br>
+- Scout connection: Traffic Safety merit badge.<br>
+- Follow-up discussion questions:<br>
+ - How does this improve traffic flow?<br>
+ - What data does it collect?<br>
+ - How does it handle special events? </p>
+
+<h3 id="round6%3Aautomatedsprinklersystemnotai">Round 6: Automated Sprinkler System (Not AI)</h3>
+
+<p class="scouting"><em>Official scenario 10</em><br>
+- Situation: Lawn sprinklers that turn on at scheduled times.<br>
+- Answer: Not AI<br>
+- Explanation: Simple timer-based automation without adaptation<br>
+- Discuss: Scheduled automation, basic programming, time-based triggers.<br>
+- Scout connection: Gardening merit badge.<br>
+- Follow-up discussion questions:<br>
+ - How could this system be improved?<br>
+ - What would make it “smart”?<br>
+ - How could it be more efficient? </p>
+
+<h3 id="round7%3Asmartirrigationsystemai">Round 7: Smart Irrigation System (AI)</h3>
+
+<p class="scouting"><em>Official scenario 11</em><br>
+- Situation: Sprinklers that adjust watering based on soil moisture, weather forecasts, and plant needs.<br>
+- Answer: AI<br>
+- Explanation: System learns optimal watering patterns using multiple data sources.<br>
+- Discuss: Multi-factor decision making, environmental adaptation, resource optimization.<br>
+- Scout connection: Environmental Science merit badge.<br>
+- Follow-up discussion questions:<br>
+ - What factors influence its decisions?<br>
+ - How does it save water?<br>
+ - What sensors does it use? </p>
+
+<h3 id="round8%3Aautomatichanddryernotai">Round 8: Automatic Hand Dryer (Not AI)</h3>
+
+<p class="scouting"><em>Official scenario 17</em><br>
+- Situation: A bathroom hand dryer that activates when hands are present.<br>
+- Answer: Not AI<br>
+- Explanation: Simple sensor-triggered response without learning.<br>
+- Discuss: Sensor technology, basic automation, trigger-response systems.<br>
+- Scout connection: Engineering merit badge.<br>
+- Follow-up discussion questions:<br>
+ - What type of sensor does it use?<br>
+ - How is this different from AI?<br>
+ - What would make it “smart”? </p>
+
+<h3 id="round9%3Asmartenergymonitorai">Round 9: Smart Energy Monitor (AI)</h3>
+
+<p class="scouting"><em>Official scenario 18</em><br>
+- Situation: A home system that learns energy usage patterns and suggests optimizations.<br>
+- Answer: AI<br>
+- Explanation: System analyzes patterns and provides adaptive recommendations.<br>
+- Discuss: Pattern analysis, predictive modeling, resource optimization.<br>
+- Scout connection: Energy merit badge.<br>
+- Follow-up discussion questions:<br>
+ - What patterns does it analyze?<br>
+ - How does it make recommendations?<br>
+ - How does this save energy? </p>
+
+<h3 id="round10%3Asmartchessprogramai">Round 10: Smart Chess Program (AI)</h3>
+
+<p class="scouting"><em>Official scenario 2</em><br>
+- Situation: A chess program that improves its strategy by analyzing past games.<br>
+- Answer: AI<br>
+- Explanation: The program learns and adapts from experience.<br>
+- Discuss: Understanding machine learning, recognition of pattern analysis, and the concept of improvement through experience.<br>
+- Scout connection: Chess merit badge.<br>
+- Follow-up discussion questions:<br>
+ - How does the program learn?<br>
+ - What data does it use?<br>
+ - How is this different from a basic calculator? </p>
+
+<h3 id="chessdiscussionpoints">Chess discussion points</h3>
+
+<p><em>Added for the chess round.</em><br>
+- Official explanation: AI because the program learns from past games (machine learning)<br>
+- Under the Requirement 1 definition, a chess program that doesn’t learn but plays well would also count as AI<br>
+ - It simulates human problem solving and decision making<br>
+ - Learning is one way to get there, not the only way<br>
+ - Deep Blue (1997) relied mainly on massive search and hand-built evaluation rules, and was still called AI<br>
+- Questions to draw out the distinction<br>
+ - If the program never learned from past games, would it still be AI?<br>
+ - A calculator also follows fixed rules. Why isn’t it AI? (It computes an answer. A chess program weighs options and chooses.)<br>
+ - Does the alarm clock, hand dryer, or sprinkler timer simulate anything a human would think about?<br>
+ - Who decides where the line is?<br>
+- Ties to the ground rule: there often isn’t a single “right” answer </p>
+
+<h2 id="2etimeline%3Amilestonesinthedevelopmentofai">2(e) Timeline: milestones in the development of AI</h2>
+
+<p><em class="scouting">(e) Create a timeline with five key milestones in the development of artificial intelligence.</em><br>
+<em>Examples below, based on my own web searches and information linked from the guide.</em><br>
+- 1943: McCulloch and Pitts publish a mathematical model of an artificial neuron<br>
+- 1950: Alan Turing publishes “Computing Machinery and Intelligence” and proposes the imitation game (the Turing test)<br>
+- 1956: Dartmouth summer workshop; the term “artificial intelligence” comes from its proposal<br>
+- 1958: Frank Rosenblatt’s perceptron, an early neural network that learns from examples<br>
+- 1959: Arthur Samuel’s checkers program, and the term “machine learning”<br>
+- 1966: ELIZA, an early chatbot, at MIT<br>
+- 1970s–1980s: expert systems (for example MYCIN and XCON) put rule-based AI to work in medicine and business<br>
+ - AI “winters”: funding and interest collapsed in the mid–1970s and again in the late 1980s<br>
+- 1986: backpropagation is popularized, making multi-layer neural networks trainable<br>
+- 1997: IBM’s Deep Blue defeats world chess champion Garry Kasparov<br>
+- 2011: IBM’s Watson wins Jeopardy!, and Apple introduces Siri<br>
+- 2012: AlexNet wins the ImageNet image-recognition contest, launching the deep learning boom<br>
+- 2016: DeepMind’s AlphaGo defeats Go champion Lee Sedol<br>
+- 2017: Google researchers publish “Attention Is All You Need,” introducing the transformer behind today’s LLMs<br>
+- 2022: ChatGPT is released to the public (2022–11–30)<br>
+- 2024: Nobel Prizes recognize AI work: Physics (Hopfield and Hinton, neural networks) and Chemistry (Baker, Hassabis, and Jumper, protein design and structure prediction)<br>
+- <em>Dates are from general knowledge. Spot-check any you plan to state precisely.</em></p>
+
+<h1 id="requirement3%3Aautomationbasics45min">Requirement 3: Automation Basics (45 min)</h1>
+
+<p><em class="scouting">Do the following and share what you learned with your counselor:</em><br>
+<em>Each list is double the number requested.</em> </p>
+
+<h2 id="3aeverydaylife%3A20examples">3(a) Everyday life: 20 examples</h2>
+
+<p><em class="scouting">(a) Identify 10 examples of how automation is currently used in everyday life.</em><br>
+- Programmable thermostat<br>
+- Automatic doors<br>
+- Timed traffic lights<br>
+- Washing machine and dishwasher cycles<br>
+- Garage door opener<br>
+- Lawn sprinkler timers<br>
+- ATMs<br>
+- Self-checkout lanes<br>
+- Elevators<br>
+- Cruise control<br>
+- Automatic bill pay<br>
+- Phone alarms and calendar reminders<br>
+- Email out-of-office auto-replies<br>
+- Robot vacuum<br>
+- Coffee maker timer<br>
+- Vending machines<br>
+- Streetlights that turn on at dusk<br>
+- Smart-home routines (lights on at sunset)<br>
+- Automatic car wash<br>
+- Automatic software updates<br>
+- “Remind me when I get home” </p>
+
+<h2 id="3bworkplace%3A10examples">3(b) Workplace: 10 examples</h2>
+
+<p><em class="scouting">(b) Identify five examples of how automation is currently used in the workplace.</em><br>
+- Assembly-line robots<br>
+- Warehouse conveyors and sorting<br>
+- Payroll processing<br>
+- Automated inventory reordering<br>
+- Scheduled data backups<br>
+- Software build, test, and deployment pipelines<br>
+- Robotic process automation for data entry and invoices<br>
+- Automated phone menus<br>
+- Laboratory sample-handling robots<br>
+- Automated appointment reminders </p>
+
+<h2 id="3cschool%3A10examples">3(c) School: 10 examples</h2>
+
+<p><em class="scouting">(c) Identify five examples of how automation can be used at school or in support of your education.</em><br>
+- Auto-graded quizzes and online homework<br>
+- Learning management system deadlines and reminders<br>
+- Flashcard apps with spaced-repetition schedules<br>
+- Spell check and grammar rules<br>
+- Citation generators<br>
+- Spreadsheet formulas that calculate grades<br>
+- Online course registration and waitlists<br>
+- Library self-checkout and automatic due-date notices<br>
+- Bell and announcement systems<br>
+- Attendance tracking with ID scans</p>
+
+<h2 id="3drepetitivetaskshumanerrorandresources">3(d) Repetitive tasks, human error, and resources</h2>
+
+<p><em class="scouting">(d) Explain how automation performs repetitive tasks without human intervention and how it reduces human error and optimizes resources.</em> </p>
+
+<h2 id="3etimeline%3Amilestonesinthedevelopmentofautomation">3(e) Timeline: milestones in the development of automation</h2>
+
+<p><em class="scouting">(e) Create a timeline with five significant milestones in automation development.</em> </p>
+
+<h1 id="requirement4%3Aethicsinai45min">Requirement 4: Ethics in AI (45 min)</h1>
+
+<p><em class="scouting">Do the following and share what you learned with your counselor:</em> </p>
+
+<h2 id="4akeypointstodiscuss">4(a) Key points to discuss</h2>
+
+<p><em class="scouting">(a) Research ethical concerns and responsible use in AI, including bias, privacy, and AI decision-making.</em><br>
+- Bias<br>
+ - AI learns from data, and data reflects the past, including its unfairness<br>
+ - Facial recognition: a 2018 MIT study (Gender Shades) found much higher error rates for darker-skinned women<br>
+ - Hiring: Amazon scrapped an experimental resume screener in 2018 after it favored men’s resumes<br>
+ - Ties to the Employment Screening and Law Enforcement rounds<br>
+- Privacy<br>
+ - What you type into a chatbot may be stored and may be used to train future models<br>
+ - Photos, voice, location, and browsing history are all data<br>
+ - Who owns it, who can see it, and can you take it back?<br>
+ - Special care for minors and for other people’s information<br>
+- AI decision-making<br>
+ - AI is already used for decisions about people: admissions, hiring, loans, health care, policing<br>
+ - Who is responsible when it’s wrong?<br>
+ - Can anyone explain the decision, and can it be appealed?<br>
+ - Human in the loop vs. human rubber stamp<br>
+- Also worth a mention<br>
+ - Made-up answers (hallucinations) stated confidently<br>
+ - Sycophancy: telling you what you want to hear<br>
+ - Electricity and water use by data centers<br>
+ - Jobs and who benefits<br>
+ - Creators’ work used for training without permission<br>
+ - Academic honesty<br>
+- Responsible use starts with questions<br>
+ - Who made it? What data was it trained on?<br>
+ - What are the stakes if it’s wrong?<br>
+ - Who checks it? </p>
+
+<h2 id="4bwhatwouldyoudo">4(b) What Would You Do?</h2>
+
+<p><em class="scouting">(b) Meet with your counselor, play, and discuss five rounds of the “What Would You Do?” ethical decision-making scenarios.</em><br>
+- Five rounds, in slide order<br>
+- Four official scenarios (Note to Counselor text) plus my custom scenario</p>
+
+<h3 id="round1%3Aaiinlawenforcement">Round 1: AI in Law Enforcement</h3>
+
+<p class="scouting"><em>Official scenario 3</em><br>
+- Situation: Police department is using AI to predict high-crime areas by analyzing historical crime data to allocate patrol resources.<br>
+- Key considerations:<br>
+ - Data Analysis:<br>
+ - Historical crime statistics<br>
+ - Demographic information<br>
+ - Socioeconomic factors<br>
+ - Time and location patterns<br>
+ - Ethical Concerns:<br>
+ - Racial bias<br>
+ - Community impact<br>
+ - Privacy rights<br>
+ - Resource allocation<br>
+ - Implementation Challenges:<br>
+ - Officer training<br>
+ - Community trust<br>
+ - System transparency<br>
+ - Accountability measures<br>
+- Scout Law Connections:<br>
+ - Trustworthy: Maintaining public trust<br>
+ - Loyal: Serving all communities fairly<br>
+ - Helpful: Protecting public safety<br>
+ - Brave: Addressing difficult issues<br>
+- Discussion questions:<br>
+ - How can we ensure fair treatment of all communities?<br>
+ - What oversight should be in place?<br>
+ - How should this data be used responsibly?<br>
+ - What role does human judgment play? </p>
+
+<h3 id="round2%3Aeducationalassessmentai">Round 2: Educational Assessment AI</h3>
+
+<p class="scouting"><em>Official scenario 4</em><br>
+- Situation: School system implementing AI to grade essays and assignment by using AI to evaluate writing quality, content, and creativity.<br>
+- Key considerations:<br>
+ - Assessment Criteria:<br>
+ - Writing mechanics<br>
+ - Content understanding<br>
+ - Creativity measures<br>
+ - Learning objectives<br>
+ - Potential Challenges:<br>
+ - Subjective evaluation<br>
+ - Cultural sensitivity<br>
+ - Language differences<br>
+ - Creative expression<br>
+ - Student Impact:<br>
+ - Learning motivation<br>
+ - Fair assessment<br>
+ - Feedback quality<br>
+ - Educational growth<br>
+- Scout Law Connections:<br>
+ - Trustworthy: Ensuring fair evaluation<br>
+ - Helpful: Supporting learning<br>
+ - Kind: Considering individual needs<br>
+- Discussion questions:<br>
+ - How can creativity be fairly assessed?<br>
+ - What appeals process should exist?<br>
+ - How should cultural differences be handled?<br>
+ - What role should human teachers play? </p>
+
+<h3 id="round3%3Asocialmediacontentmoderation">Round 3: Social Media Content Moderation</h3>
+
+<p class="scouting"><em>Official scenario 6</em><br>
+- Situation: AI system moderates online content for youth platforms by filtering inappropriate content and monitoring interactions.<br>
+- Key considerations:<br>
+ - Content Evaluation:<br>
+ - Age appropriateness<br>
+ - Cultural sensitivity<br>
+ - Context understanding<br>
+ - Safety concerns<br>
+ - Protection Measures:<br>
+ - User safety<br>
+ - Privacy protection<br>
+ - Bullying prevention<br>
+ - Information security<br>
+ - Implementation Challenges:<br>
+ - False positives/negatives<br>
+ - Context interpretation<br>
+ - Freedom of expression<br>
+ - Community standards<br>
+- Scout Law Connections:<br>
+ - Clean: Maintaining appropriate content<br>
+ - Courteous: Preventing harassment<br>
+ - Friendly: Supporting positive interaction<br>
+ - Brave: Addressing harmful content<br>
+- Discussion questions:<br>
+ - How strict should filtering be?<br>
+ - What appeals process is needed?<br>
+ - How should context be considered?<br>
+ - What role do human moderators play? </p>
+
+<h3 id="round4%3Aemploymentscreening">Round 4: Employment Screening</h3>
+
+<p class="scouting"><em>Official scenario 9</em><br>
+- Situation: AI system screening job applications and resumes.<br>
+- Key considerations:<br>
+ - Evaluation Criteria:<br>
+ - Skills assessment<br>
+ - Experience matching<br>
+ - Qualification verification<br>
+ - Fairness Concerns:<br>
+ - Bias prevention<br>
+ - Equal opportunity<br>
+ - Diverse hiring<br>
+ - Special circumstances<br>
+ - Implementation Issues:<br>
+ - Transparency<br>
+ - Appeals process<br>
+ - Human oversight<br>
+ - Communication methods<br>
+- Scout Law Connections:<br>
+ - Friendly: Respectful treatment<br>
+ - Kind: Understanding circumstances<br>
+ - Helpful: Supporting careers<br>
+- Discussion questions:<br>
+ - How can fairness be ensured?<br>
+ - What oversight is needed?<br>
+ - How should unique situations be handled?<br>
+ - What role should human recruiters play? </p>
+
+<h3 id="round5%3Astudentessayassignment">Round 5: Student Essay Assignment</h3>
+
+<p><em>Custom scenario</em><br>
+- Situation: A student is assigned to “Write a 15 page paper on Victor Hugo’s novel <em>Les Misérables</em>.” The student is thinking about using AI to help.<br>
+- The assignment:<br>
+ - Read the book:<br>
+ - The unabridged novel is over 1,200 pages, and translations and abridged editions differ<br>
+ - The movies and the musical are not the book<br>
+ - Choose a focus:<br>
+ - One theme or question, such as justice vs. mercy, redemption, poverty and social injustice, or law vs. conscience<br>
+ - Or one character, such as Valjean or Javert<br>
+ - Learn the context:<br>
+ - France from 1815 to 1832, including the June Rebellion of 1832<br>
+ - Hugo’s own politics and exile, and when the novel was published (1862)<br>
+ - Plan:<br>
+ - Write a thesis and an outline<br>
+ - 15 pages is roughly 4,000 to 4,500 words, double-spaced<br>
+ - Support the argument:<br>
+ - Quotations and page citations from the text<br>
+ - Optionally, secondary sources<br>
+ - Finish:<br>
+ - Draft, revise, and proofread<br>
+ - Cite sources in the format the teacher requires (e.g., MLA)<br>
+- Key considerations:<br>
+ - Learning:<br>
+ - What is the assignment for? (reading closely, forming and defending an argument, writing clearly)<br>
+ - AI can help learning: explaining context and vocabulary, quizzing you on what you read, asking questions about your thesis, giving feedback on a draft you wrote<br>
+ - AI can short-circuit learning: writing the paper, summarizing the book in place of reading it, choosing your thesis for you<br>
+ - Rules:<br>
+ - What are the teacher’s and school’s rules on AI for this assignment? (syllabus, honor code)<br>
+ - Is AI use allowed, limited, or prohibited? Does it have to be disclosed?<br>
+ - Whose work is it? Most school policies treat AI-written text submitted as your own as plagiarism<br>
+ - If the rules aren’t clear, ask the teacher before starting<br>
+ - Has the student read the book?<br>
+ - An AI summary is not the book, and it can be wrong<br>
+ - AI can invent quotations, page numbers, and plot details, so every quotation must be checked against the actual text<br>
+ - Reading the book is where the learning and the evidence for the essay come from<br>
+ - Non-native speakers:<br>
+ - Reading a 1,200-page nineteenth-century novel in a second language is much harder, and Hugo wrote in French<br>
+ - Translation, vocabulary, and grammar tools can legitimately help<br>
+ - Where is the line between help with language (grammar, phrasing, translating your own ideas) and AI generating the ideas and the text?<br>
+ - AI-detection tools are unreliable, and research has found they are more likely to flag non-native writers’ work as AI-written (Liang et al., 2023)<br>
+ - Being open with the teacher about how you used AI is protective<br>
+ - Developing ideas in a first language and then writing them in English yourself can be a strength<br>
+ - Other students:<br>
+ - What if a classmate has AI write the whole paper?<br>
+- Scout Law connections:<br>
+ - Trustworthy: Being honest about whose work it is and how AI was used<br>
+ - Obedient: Following the school’s and teacher’s rules on AI<br>
+ - Brave: Asking the teacher before starting, and doing the hard work of reading the whole book<br>
+ - Kind: Considering classmates who face extra challenges, such as reading in a second language<br>
+- Discussion questions:<br>
+ - Where is the line between getting help and having AI do the work?<br>
+ - What should the student do before using AI at all?<br>
+ - Does it matter whether the student has read the book? What is lost if not?<br>
+ - How could the student use AI to learn more, not less?<br>
+ - How should a student’s language background change what help is appropriate?<br>
+ - What if a classmate uses AI to write the whole paper and gets a better grade? </p>
+
+<h2 id="4cyourownethicalguidelines">4(c) Your own ethical guidelines</h2>
+
+<p><em class="scouting">(c) Develop your own ethical guidelines for the use of AI.</em> </p>
+
+<h2 id="4dtheturingtest">4(d) The Turing test</h2>
+
+<p><em class="scouting">(d) What is the Turing test?</em><br>
+- Proposed by Alan Turing in 1950 as the “imitation game”<br>
+- A human judge has a text conversation with two hidden parties, one human and one machine<br>
+- If the judge can’t reliably tell which is the machine, the machine passes<br>
+- It tests behavior, not understanding<br>
+ - Searle’s Chinese Room (1980) argues that convincing conversation isn’t the same as understanding<br>
+- Recent results<br>
+ - A 2025 study (Jones and Bergen) reported that GPT–4.5, prompted to act like a person, was judged to be the human 73% of the time in five-minute text chats<br>
+ - Passing a conversation test doesn’t mean the system is general or superintelligent<br>
+- Good follow-up: does passing the test mean it’s intelligent?</p>
+
+<h1 id="requirement5%3Adeepfakes25min">Requirement 5: Deepfakes (25 min)</h1>
+
+<p><em class="scouting">Do the following and share what you learned with your counselor:</em><br>
+<em>Keep it age-appropriate for ages 12 to 17. Stay at the pattern level. No explicit descriptions.</em> </p>
+
+<h2 id="5awhatadeepfakeisandhowitcanaffectanindividual">5(a) What a deepfake is and how it can affect an individual</h2>
+
+<p><em class="scouting">(a) Explain what a deepfake is and how it can affect an individual.</em><br>
+- Definition<br>
+ - Images, video, or audio created or altered with AI to realistically show someone saying or doing something they never said or did<br>
+ - Includes voice clones<br>
+- Ways it can affect an individual<br>
+ - Embarrassment, bullying, and harassment<br>
+ - Damage to reputation, friendships, and opportunities<br>
+ - Scams: a cloned voice calls a parent or grandparent asking for money<br>
+ - Fake sexual images, a serious form of abuse<br>
+ - Distress, even when everyone knows it’s fake<br>
+ - Doubt: real evidence can be dismissed as “just a deepfake”<br>
+- Spotting them<br>
+ - Visual tells (odd hands, glitches, mismatched audio) are unreliable and keep getting less reliable<br>
+ - Better habits: check the source, look for the original, and verify with the person through a different channel<br>
+ - A family code word helps with voice-clone scams<br>
+ - Current developments are about proving that something is authentic. If it can’t be proven to be authentic, then assume it is a fake. Similar to what is done in selling antiques. – C2PA: Coalition for Content Provenance and Authenticity aka Content Credentials. </p>
+
+<h2 id="5bwhattodoifyouorsomeoneyouknowisaffected">5(b) What to do if you or someone you know is affected</h2>
+
+<p><em class="scouting">(b) Describe what actions to take if you or someone you know is impacted by a deepfake.</em><br>
+- Stop: don’t reply to the person, and don’t forward or repost the fake<br>
+- Tell a trusted adult first: parent, troop leader, teacher, or school counselor<br>
+- Keep a record of where it appears: links, usernames, and dates<br>
+ - Sexual or intimate images of anyone under 18: don’t screenshot, save, or send the image<br>
+ - Write down the link and where it appears instead<br>
+- Report it to the platform<br>
+ - Most platforms have a way to report fake or harassing content<br>
+ - Federal law now requires covered platforms to have a removal process (see below)<br>
+- Report it to the school if classmates are involved<br>
+- Law enforcement<br>
+ - Report it to local police, especially for threats, extortion, or sexual images<br>
+ - For child exploitation, NCMEC’s CyberTipline (report.cybertip.org) takes reports (from general knowledge, not rechecked)<br>
+- Support the person<br>
+ - Don’t blame them<br>
+ - Don’t pass the image around, even to “show how bad it is”<br>
+- If a scout tells me this has happened to them<br>
+ - Don’t probe in front of the group<br>
+ - Talk privately, following Youth Protection, and bring in a parent or troop leader </p>
+
+<h3 id="takeitdownactverified2026-10-01">Take It Down Act (verified 2026–10–01)</h3>
+
+<ul>
+<li>Signed 2025–05–19</li>
+<li>Makes it a federal crime to knowingly publish nonconsensual intimate images
+
+<ul>
+<li>Covers AI-generated “digital forgeries” of identifiable people</li>
+<li>Penalties of up to 2 years for adult victims and up to 3 years for minor victims (per Orrick’s summary)</li>
+</ul></li>
+<li>Covered platforms (sites, apps, and services built on user-generated content) must have a removal process
+
+<ul>
+<li>Must remove the reported content and known identical copies within 48 hours of a valid request</li>
+<li>Took effect 2026–05–19, and the FTC enforces it</li>
+</ul></li>
+</ul>
+
+<h3 id="ncmectakeitdownserviceverified2026-10-01">NCMEC Take It Down service (verified 2026–10–01)</h3>
+
+<ul>
+<li>takeitdown.ncmec.org, free, operated by the National Center for Missing &amp; Exploited Children</li>
+<li>For nude, partially nude, or sexually explicit images or videos taken when the person was under 18
+
+<ul>
+<li>If the image was taken at 18 or older, NCMEC points to StopNCII.org</li>
+</ul></li>
+<li>Works by making a digital fingerprint (hash) on your own device
+
+<ul>
+<li>The image isn’t uploaded</li>
+<li>Participating platforms scan for matches and remove them</li>
+</ul></li>
+<li>Their warning: do NOT send, share, or download any image or video to submit to Take It Down</li>
+<li>Their page doesn’t say whether AI-generated images are covered
+
+<ul>
+<li>Check before telling the class that it handles deepfakes</li>
+</ul></li>
+</ul>
+
+<h1 id="requirement6%3Adevelopingaiskills30min">Requirement 6: Developing AI Skills (30 min)</h1>
+
+<p><em class="scouting">Do the following and share what you learned with your counselor:</em> </p>
+
+<h2 id="6athelearningprocessforaianditslimitations">6(a) The learning process for AI and its limitations</h2>
+
+<p><em class="scouting">(a) Discuss the learning process for AI and its limitations.</em><br>
+- How it learns<br>
+ - Machine learning: find patterns in huge amounts of example data, with no hand-written rules<br>
+ - LLMs: trained to predict the next token in text<br>
+ - Then tuned with human feedback to be more helpful, which is also where sycophancy comes from<br>
+ - It doesn’t “know” things the way people do<br>
+- Limitations<br>
+ - Garbage in, garbage out: bad or biased data gives bad or biased results<br>
+ - Hallucination: confident, fluent, wrong<br>
+ - Training cutoff: doesn’t know recent events unless it can search<br>
+ - No built-in fact check<br>
+ - Struggles outside what it was trained on<br>
+ - Non-deterministic: ask twice and the answers differ<br>
+ - Limited memory: it only works with what’s in the conversation (Scoutly starts fresh with every question)<br>
+ - Can’t explain its own reasoning reliably<br>
+- Tie back to Requirement 1: machine learning, LLM, token, non-deterministic, sycophant </p>
+
+<h2 id="6bfivemethodstocommunicateeffectivelywithai">6(b) Five methods to communicate effectively with AI</h2>
+
+<p><em class="scouting">(b) Identify five methods of how to effectively communicate with AI.</em><br>
+- Interfaces:<br>
+ - <strong>Typed chat:</strong> Text in a chatbot such as Claude, ChatGPT, or Scoutly. Clear, specific wording matters most here.<br>
+ - <strong>Voice:</strong> Speaking to an assistant such as Siri, Alexa, or a chatbot’s voice mode. Short, clear requests work best, and you need to check that it heard you correctly.<br>
+ - <strong>Images and camera:</strong> Showing it a photo, screenshot, or live camera view and asking about it, or describing a picture you want it to generate.<br>
+ - <strong>Built into other apps:</strong> AI features inside tools you already use, such as a writing assistant that works on text you highlight, autocomplete, or search summaries. You communicate by selecting content and giving a short instruction.<br>
+ - <strong>Code and agents:</strong> Programs that call AI through an API, or agent tools that take actions for you, such as Cowork or Code. Here you give general directions and set limits on what the AI may do.<br>
+ - <strong>Recommendation feeds:</strong> Your clicks, likes, and watch time act as signals to a recommendation engine.<br>
+- Scouting’s answers<br>
+ - The official Digital Resources for Counselors document lists these titles, but no links<br>
+ - “AI Literacy: How to Write Good Prompts”<br>
+ - “The 8 Most Common AI Prompt Types You Should Know”<br>
+ - “Google’s 9 Hour AI Prompt Engineering Course in 20 Minutes”<br>
+ - “How to Use ChatGPT Effectively (and Avoid Common Mistakes)”<br>
+ - “How to Use ChatGPT Effectively as a Student? ChatGPT Helps You Study.”<br>
+ - Scoutly is the intended source. Try asking it to explain the activity for requirement 6b of the AI merit badge.<br>
+- My analysis: five methods that work across tools<br>
+ - Be specific and give context: who you are, what the task is, who it’s for, and why<br>
+ - Say what you want back: format, length, tone, or a role to play (“act as a tutor”)<br>
+ - Give an example of what good looks like<br>
+ - Break big tasks into steps and iterate: follow up, correct it, and refine<br>
+ - Check the answer: ask for sources, then verify them, and ask it to point out what it might have gotten wrong<br>
+- Also worth a mention<br>
+ - Say what to avoid<br>
+ - Ask it to ask you questions before it answers<br>
+ - Tell it to say “I don’t know” rather than guess </p>
+
+<h2 id="6cwhypromptengineeringmatters">6(c) Why prompt engineering matters</h2>
+
+<p><em class="scouting">(c) Explain the importance of prompt engineering when using AI to create better output.</em><br>
+- The same AI gives very different results depending on the prompt<br>
+- A better prompt means less rework, fewer errors, and output that fits your need<br>
+- Example for the class<br>
+ - Weak: “Write about Les Misérables.”<br>
+ - Better: “I’m a 10th grader. Explain in five bullet points how Javert and Valjean represent law versus mercy. Use plain language. Don’t write my paper.”<br>
+- It’s a skill, not magic<br>
+ - A good prompt still needs a checked answer<br>
+ - A good prompt can ask for help thinking, not for the finished work </p>
+
+<h2 id="6dclearinstructionsforaschool-relatedtask">6(d) Clear instructions for a school-related task</h2>
+
+<p><em class="scouting">(d) Demonstrate three examples of writing clear instructions for a school-related task.</em><br>
+- My comment<br>
+ - Use AI for the “donkey” work<br>
+ - Don’t let it do the thinking for you<br>
+ - Use it to help you think<br>
+- Focus on writing and analyzing the prompts<br>
+- If we get to that point, I’ll demonstrate the prompts live in Claude Chat (over WiFi or a hotspot)<br>
+- I can also bring up Cowork and Code, but there won’t be time to show much with them</p>
+
+<h1 id="requirement7%3Apracticalapplication5min">Requirement 7: Practical Application (5 min)</h1>
+
+<p><em class="scouting">Do ONE of the following:</em><br>
+- Slide only: do ONE of these on your own<br>
+- Needs approval from whoever is the scout’s counselor for Requirement 7 before they start<br>
+- I don’t recommend a specific technology<br>
+ - The scout tells me what they want to use<br>
+ - I’m willing to work with them to identify tools appropriate to what they want to do</p>
+
+<h2 id="7aaiproject">7(a) AI project</h2>
+
+<p><em class="scouting">(a) With your counselor’s approval, choose an artificial intelligence project based on your personal interest or a community need. Develop a plan outlining the project’s objectives, data requirements, and potential ethical considerations. Implement the project utilizing appropriate artificial intelligence tools, languages, or platforms. Share your project with your counselor. Discuss the steps you followed to create the project and your experience during the process.</em> </p>
+
+<h2 id="7blessonplan">7(b) Lesson plan</h2>
+
+<p><em class="scouting">(b) With your counselor’s approval, design a short lesson plan on AI and teach it to your patrol or a group of Scouts. The lesson should include an AI-generated age-appropriate explanation of AI, examples of how AI is used in both everyday life as well as in the workplace, and an interactive demonstration of how Scouts could utilize AI to assist them with a school assignment, Scouting activity, or rank advancement. Share information on the development process and teaching experience with your counselor.</em> </p>
+
+<h1 id="requirement8%3Acareerexploration5min">Requirement 8: Career Exploration (5 min)</h1>
+
+<p><em class="scouting">Do ONE of the following:</em><br>
+- Slide only: do ONE of these on your own<br>
+- Event materials listed this as a prerequisite, so some scouts may already have done it</p>
+
+<h2 id="8acareerresearch">8(a) Career research</h2>
+
+<p><em class="scouting">(a) Identify three career opportunities that would use skills and knowledge in artificial intelligence or automation. Pick one and research the training, education, certification requirements, experience, and expenses associated with entering the field. Research the prospects for employment, starting salary, advancement opportunities, and career goals associated with this career. Discuss what you learned with your counselor and whether you might be interested in this career.</em> </p>
+
+<h2 id="8binterview">8(b) Interview</h2>
+
+<p><em class="scouting">(b) Interview an artificial intelligence or automation professional. Learn about their day-to-day work, the challenges they face, and their vision for the future of artificial intelligence or automation. Inquire about training, education, certification requirements, experience, and expenses associated with entering the field. Share what you learned with your counselor.</em> </p>
+
+<h1 id="wrap-up20min">Wrap-up (20 min)</h1>
+
+<ul>
+<li>Explain the follow-up process and hand out the handout
+
+<ul>
+<li>Email me at \<your email here\></li>
+<li>They must also include another adult (parent or Scout leader) on the email</li>
+</ul></li>
+<li>Three things to do on their own
+
+<ul>
+<li>Requirement 4c: develop your own ethical guidelines for the use of AI</li>
+<li>Requirement 7</li>
+<li>Requirement 8</li>
+</ul></li>
+<li>Send their work as an email attachment
+
+<ul>
+<li>If it meets my expectations, I mark the requirement complete</li>
+<li>If it doesn’t, I give feedback on what I think is missing</li>
+</ul></li>
+<li>They may also work with another counselor of their choosing, if that counselor is approved for the AI merit badge</li>
+<li>Complete advancement reports</li>
+</ul>
+
+<h1 id="sources">Sources</h1>
+
+<ul>
+<li><a href="https://filestore.scouting.org/filestore/Merit_Badge_ReqandRes/Note-to-Counselor-Artificial-Intelligence-(AI)-Merit-Badge.pdf">Note to Counselor: AI Merit Badge</a></li>
+<li><a href="https://filestore.scouting.org/filestore/Merit_Badge_ReqandRes/Digital-Resources-for-Artificial-Intelligence-Merit-Badge-Counselors.pdf">Digital Resources for AI Merit Badge Counselors</a></li>
+<li><a href="https://www.ftc.gov/business-guidance/resources/complying-take-it-down-act">FTC: Complying With the Take It Down Act</a></li>
+<li><a href="https://www.orrick.com/en/Insights/2025/05/TAKE-IT-DOWN-Act-Becomes-Law">Orrick: TAKE IT DOWN Act Becomes Law</a></li>
+<li><a href="https://takeitdown.ncmec.org/">NCMEC: Take It Down</a></li>
+</ul>
+</div>
+  
+</body>
+</html>
