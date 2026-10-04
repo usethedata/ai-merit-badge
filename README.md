@@ -30,7 +30,7 @@ The design assumes:
 My thoughts:
 
 - As noted above, I strongly recommend that the class have a minimum age requirement of 13.  Teaching this class with a large age range (such as 11 through 17) would, in my opinion, be very difficult.  Computer, AI, and social media use by minors is a rapidly evolving situation.  Your mileage may vary, but consider what will work for your situation.
-- For the event where I taught this, we listed requirement 8 as a prerequisite.  In hindsight, I think the requirement would be much more meaningful to the scouts after going through the material.
+- For the event where I taught this, we listed requirement 8 as a prerequisite.  In hindsight, I think the requirement would be much more meaningful to the scouts after going through the material.  So, I would not make requirement 8 a prerequisite the next time I teach this.
 - The two timeline requirements (2e and 3e) would make good prerequisites. 
 - If you don't have the timelines as prerequisites, write down some milestones for AI and automation (at least 5, maybe 10) on individual index cards or sticky notes, but don't put the dates on them.  First have the class try to put them in chronological order.  Then have the class guess/estimate the dates (years) for these milestones.  
 - You can do requirement 4(c) in class (develop your own ethical guidelines for the use of AI).  However, my thought is that this is best done with some reflection by the scout, in consultation with their parents/guardians.  So, I suggest making this one homework as well.
